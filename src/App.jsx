@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Task from './task.jsx'
 import TaskBox from './taskBox.jsx'
+import SuperFocus from './focus.jsx'
 
 function App() {
   const [tasks, setTasks] = useState([])
@@ -32,6 +33,30 @@ function App() {
     })
     setTasks(newList)
   }
+
+  function realFocus(id) {
+    console.log(id)
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].id === id) {
+        tasks[i].atHand = true
+        setFocusTask(tasks[i])
+      }
+    } 
+    const newList = tasks.filter((task) => {
+      return task.id !== id
+    })
+    setTasks(newList)
+
+  }
+  
+  if (focusTask) {
+    return (
+      <>
+      <h1>FOCUS ON THIS ONE!!!</h1>
+    <Task taskData={focusTask}></Task>
+      </>
+    )
+  }
   return (
     <div className="App">
       <div>        
@@ -44,7 +69,7 @@ function App() {
       </form>
             
       <div>
-        <TaskBox runc={remove} tasks={tasks}></TaskBox>
+        <TaskBox runc={remove} tasks={tasks} focus0={realFocus}></TaskBox>
         
       </div>
       <h1></h1>

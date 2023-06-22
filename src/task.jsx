@@ -1,13 +1,14 @@
-function Task({taskData, func}) {
+function Task({taskData, func, focus2}) {
     
     return (
         <>
         <div className="task">
             <input onClick={ () => func(taskData.id)} className="check" type="checkbox" />
             <h3>{taskData.title}</h3>
-            <div className="buttons">
-                <button className="button">Focus On Now</button>
-            </div>
+            {!taskData.atHand && (<div className="buttons">
+                <button onClick={ () => focus2(taskData.id)} className="button">Focus On Now</button>
+            </div>) }
+            
         </div>
         
         </>
