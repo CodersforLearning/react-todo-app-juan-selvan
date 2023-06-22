@@ -27,12 +27,13 @@ function App() {
   }
 
   function remove(id) {
-    console.log(id)
     const newList = tasks.filter((task) => {
       return task.id !== id
     })
+    
     setTasks(newList)
   }
+  const doneFocusing = () => setFocusTask(null)
 
   function realFocus(id) {
     console.log(id)
@@ -53,7 +54,7 @@ function App() {
     return (
       <>
       <h1>FOCUS ON THIS ONE!!!</h1>
-    <Task taskData={focusTask}></Task>
+    <Task taskData={focusTask} func={doneFocusing}></Task>
       </>
     )
   }
