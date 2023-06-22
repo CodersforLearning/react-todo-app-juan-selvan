@@ -4,7 +4,42 @@
   padding: 2rem;
   text-align: center;
 }
-
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  
+}
+.button {
+  margin: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(0, 255, 170);
+  color: #fff;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.delete-button {
+  margin: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(232, 13, 13);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(8, 58, 41);
+  
+}
 .logo {
   height: 6em;
   padding: 1.5em;
