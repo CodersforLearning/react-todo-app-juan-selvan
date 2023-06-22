@@ -11,6 +11,20 @@
   margin-bottom: 1rem;
   
 }
+.adder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: rgb(44,44,44);
+}
+
+.check {
+  height: 25px;
+  width: 25px;
+  
+}
 .button {
   margin: 1rem;
   border: none;
@@ -33,7 +47,9 @@
   transition: all 0.2s ease-in-out;
 }
 .task {
+  margin: 2rem;
   display: flex;
+  border-radius: 2rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
